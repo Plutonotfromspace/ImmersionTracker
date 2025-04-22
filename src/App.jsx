@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import YouTube from 'react-youtube'
 import axios from 'axios'
 import './App.css'
@@ -48,8 +48,6 @@ function AppContent() {
       hours >= level.start && hours < level.end
     ) || immersionLevels[immersionLevels.length - 1]
   }
-  
-  const currentLevel = getCurrentLevel(totalHours)
   
   // Load user videos from Firebase when logged in
   useEffect(() => {
